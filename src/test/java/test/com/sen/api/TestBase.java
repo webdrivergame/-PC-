@@ -46,7 +46,7 @@ public class TestBase {
 	/**
 	 * 组件预参数（处理__fucn()以及${xxxx}）
 	 * 
-	 * @param apiDataBean
+	 * @param
 	 * @return
 	 */
 	protected String buildParam(String param) {
