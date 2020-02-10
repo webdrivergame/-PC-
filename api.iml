@@ -11,15 +11,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="Maven: com.sen:reportng:1.1.9">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/reportng-1.1.9.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="Maven: com.sen:velocity:1.7-dep">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/velocity-1.7-dep.jar!/" />
@@ -29,8 +20,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" scope="TEST" name="Maven: com.google.inject:guice:3.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: javax.inject:javax.inject:1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.aventstack:extentreports:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.3.0" level="project" />
@@ -78,7 +69,6 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:joor:0.9.6" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: ru.yandex.qatools.allure:allure-testng-adaptor:1.4.8" level="project" />
     <orderEntry type="library" name="Maven: ru.yandex.qatools.allure:allure-java-aspects:1.4.8" level="project" />
     <orderEntry type="library" name="Maven: ru.yandex.qatools.allure:allure-java-adaptor-api:1.4.8" level="project" />
@@ -87,8 +77,6 @@
     <orderEntry type="library" name="Maven: org.jvnet.jaxb2_commons:jaxb2-basics-runtime:0.6.5" level="project" />
     <orderEntry type="library" name="Maven: ru.yandex.qatools.properties:properties-loader:1.5" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils-core:1.8.3" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.7" level="project" />
-    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.7" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-core:2.2.7" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.2.7" level="project" />
@@ -96,5 +84,26 @@
     <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.12" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jsr173_api:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tika:tika-core:1.5" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.2.71" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.71" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.71" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.2.71" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test-common:1.2.71" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-log4j12:1.6.6" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:3.0.15" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.sisu:org.eclipse.sisu.plexus:0.0.0.M5" level="project" />
+    <orderEntry type="library" name="Maven: javax.enterprise:cdi-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-guice:no_aop:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.sisu:org.eclipse.sisu.inject:0.0.0.M5" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-classworlds:2.4" level="project" />
   </component>
 </module>

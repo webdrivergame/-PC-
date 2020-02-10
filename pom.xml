@@ -13,8 +13,10 @@
 		<envName>api-config.xml</envName>
 		<xmlFileName>testng.xml</xmlFileName>
 	</properties>
+
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -28,6 +30,7 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -43,6 +46,7 @@
 					<!-- <forkMode>always</forkMode> -->
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -53,6 +57,7 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.5</version>
@@ -87,13 +92,9 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.sen</groupId>
-			<artifactId>reportng</artifactId>
-			<version>1.1.9</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/reportng-1.1.9.jar</systemPath>
-		</dependency>
+
+
+
 		<dependency>
 			<groupId>com.sen</groupId>
 			<artifactId>velocity</artifactId>
@@ -101,47 +102,56 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/libs/velocity-1.7-dep.jar</systemPath>
 		</dependency>
+
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
 			<version>3.0</version>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>3.0.3</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
 			<artifactId>xstream</artifactId>
 			<version>1.4.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
 			<version>4.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.16</version>
 		</dependency>
+
 		<!-- 有bug <dependency> <groupId>com.jayway.jsonpath</groupId> <artifactId>json-path</artifactId> 
 			<version>2.2.0</version> </dependency> -->
 		<dependency>
@@ -149,11 +159,13 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.13</version>
 		</dependency>
+
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
 		    <version>3.1.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -172,6 +184,39 @@
 			<groupId>ru.yandex.qatools.allure</groupId>
 			<artifactId>allure-testng-adaptor</artifactId>
 			<version>1.4.8</version>
+		</dependency>
+
+
+
+		<!-- 断言监听设置currentFlag依赖包 -->
+		<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk8 -->
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-stdlib-jdk8</artifactId>
+			<version>1.2.71</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test -->
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-test</artifactId>
+			<version>1.2.71</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.6</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>3.1.1</version>
 		</dependency>
 
 	</dependencies>

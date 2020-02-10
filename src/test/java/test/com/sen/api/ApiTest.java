@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.sen.api.beans.ApiDataBean;
 import com.sen.api.configs.ApiConfig;
 import com.sen.api.excepions.ErrorRespStatusException;
+import com.sen.api.listeners.Assertion;
 import com.sen.api.listeners.AutoTestListener;
 import com.sen.api.listeners.RetryListener;
 import com.sen.api.utils.*;
@@ -184,9 +185,14 @@ public class ApiTest extends TestBase {
 		}
 		// 输出返回数据log
 		ReportUtil.log("resp:" + responseData);
+		String getResponseData = responseData.substring(0,11);
 		// 验证预期信息
-		verifyResult(responseData, apiDataBean.getVerify(),
-				apiDataBean.isContains());
+		//verifyResult(responseData, apiDataBean.getVerify(),
+				//apiDataBean.isContains());
+		Assertion.setFlag(true);
+		Assertion.verifyEquals(getResponseData,apiDataBean.getVerify());
+		apiDataBean.isContains();
+		Assert.assertTrue(Assertion.currentFlag());
 
 		// 对返回结果进行提取保存。
 		saveResult(responseData, apiDataBean.getSave());
