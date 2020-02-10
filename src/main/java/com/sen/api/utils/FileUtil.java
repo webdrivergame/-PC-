@@ -25,7 +25,6 @@ public class FileUtil {
 	 * 多個匹配條件匹配文件（去重）
 	 * 
 	 * @param dir
-	 * @param fileConfArr
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")

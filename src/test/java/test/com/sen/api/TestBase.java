@@ -37,7 +37,8 @@ public class TestBase {
 	 */
 	protected Pattern funPattern = Pattern
 			.compile("__(\\w*?)\\((([\\w\\\\\\/:\\.\\$]*,?)*)\\)");// __(\\w*?)\\((((\\w*)|(\\w*,))*)\\)
-																	// __(\\w*?)\\(((\\w*,?\\w*)*)\\)
+
+	// __(\\w*?)\\(((\\w*,?\\w*)*)\\)
 
 	protected void setSaveDates(Map<String, String> map) {
 		saveDatas.putAll(map);
@@ -49,6 +50,7 @@ public class TestBase {
 	 * @param
 	 * @return
 	 */
+
 	protected String buildParam(String param) {
 		// 处理${}
 		param = getCommonParam(param);
@@ -162,7 +164,7 @@ public class TestBase {
 	 * @param key
 	 * @return
 	 */
-	private String getBuildValue(String sourchJson, String key) {
+	private String getBuildValue(String key, String sourchJson) {
 		key = key.trim();
 		Matcher funMatch = funPattern.matcher(key);
 		if (key.startsWith("$.")) {// jsonpath
@@ -230,20 +232,12 @@ public class TestBase {
 	 * 
 	 * @param clz
 	 *            需要转换的类
-	 * @param excelPaths
-	 *            所有excel的路径配置
-	 * @param excelName
-	 *            本次需要过滤的excel文件名
-	 * @param sheetName
-	 *            本次需要过滤的sheet名
 	 * @return 返回数据
-	 * @throws DocumentException
 	 */
 	protected <T extends BaseBean> List<T> readExcelData(Class<T> clz,
-			String[] excelPathArr, String[] sheetNameArr)
-			throws DocumentException {
-		List<T> allExcelData = new ArrayList<T>();// excel文件數組
-		List<T> temArrayList = new ArrayList<T>();
+			String[] excelPathArr, String[] sheetNameArr) {
+		List<T> allExcelData = new ArrayList<>();// excel文件數組
+		List<T> temArrayList = new ArrayList<>();
 		for (String excelPath : excelPathArr) {
 			File file = Paths.get(System.getProperty("user.dir"),
 					excelPath).toFile();
@@ -256,9 +250,7 @@ public class TestBase {
 							file.getAbsolutePath(), sheetName));
 				}
 			}
-			temArrayList.forEach((bean) -> {
-				bean.setExcelName(file.getName());
-			});
+			temArrayList.forEach((bean) -> bean.setExcelName(file.getName()));
 			allExcelData.addAll(temArrayList); // 将excel数据添加至list
 		}
 		return allExcelData;

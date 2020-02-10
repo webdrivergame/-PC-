@@ -7,7 +7,8 @@ import org.testng.Reporter;
 import com.sen.api.excepions.ErrorRespStatusException;
 
 
-public class TestngRetry implements IRetryAnalyzer {
+public class
+TestngRetry implements IRetryAnalyzer {
 	private static int retryCount = 1;
 	private static int maxRetryCount = 2;
 

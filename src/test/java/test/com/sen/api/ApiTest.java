@@ -63,7 +63,7 @@ public class ApiTest extends TestBase {
 	/**
 	 * 所有api测试用例数据
 	 */
-	protected List<ApiDataBean> dataList = new ArrayList<ApiDataBean>();
+	protected List<ApiDataBean> dataList = new ArrayList<>();
 
 	private static HttpClient client;
 
@@ -86,7 +86,7 @@ public class ApiTest extends TestBase {
 		Map<String, String> params = apiConfig.getParams();
 		setSaveDates(params);
 
-		List<Header> headers = new ArrayList<Header>();
+		List<Header> headers = new ArrayList<>();
 		apiConfig.getHeaders().forEach((key, value) -> {
 			Header header = new BasicHeader(key, value);
 			if(!requestByFormData && key.equalsIgnoreCase("content-type") && value.toLowerCase().contains("form-data")){
@@ -117,7 +117,7 @@ public class ApiTest extends TestBase {
 	@DataProvider(name = "apiDatas")
 	public Iterator<Object[]> getApiData(ITestContext context)
 			throws DocumentException {
-		List<Object[]> dataProvider = new ArrayList<Object[]>();
+		List<Object[]> dataProvider = new ArrayList<>();
 		for (ApiDataBean data : dataList) {
 			if (data.isRun()) {
 				dataProvider.add(new Object[] { data });
@@ -148,7 +148,7 @@ public class ApiTest extends TestBase {
 			if (apiDataBean.getStatus()!= 0) {
 				Assert.assertEquals(responseStatus, apiDataBean.getStatus(),
 						"返回状态码与预期不符合!");
-			} 
+			}
 //			else {
 //				// 非2开头状态码为异常请求，抛异常后会进行重跑
 //				if (200 > responseStatus || responseStatus >= 300) {
@@ -159,7 +159,7 @@ public class ApiTest extends TestBase {
 //			}
 			HttpEntity respEntity = response.getEntity();
 			Header respContentType = response.getFirstHeader("Content-Type");
-			if (respContentType != null && respContentType.getValue() != null 
+			if (respContentType != null && respContentType.getValue() != null
 					&&  (respContentType.getValue().contains("download") || respContentType.getValue().contains("octet-stream"))) {
 				String conDisposition = response.getFirstHeader(
 						"Content-disposition").getValue();

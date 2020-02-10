@@ -3,13 +3,12 @@
     <rootUrl>http://10.1.101.124:8044</rootUrl>
     <headers>
         <!-- 配置为自己的参数 -->
-        <header name="Authorization" value="6cba622dc9caf473fdc322fd9a99c008"></header>
+        <header name="Authorization" value="0e4b77bd50c4f2fc506cca1adc2bf89a"></header>
         <header name="Content-Type" value="application/json"></header>
     </headers>
 
     <params>
-    	<param name="test" value="value"></param>
+        <param name="param1" value="value1"></param>
     </params>
-
-    <project_name>接口自动化测试报告</project_name>
+    <project_name>ApiTestReport</project_name>
 </root>

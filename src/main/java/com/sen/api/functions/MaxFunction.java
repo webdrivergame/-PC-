@@ -2,7 +2,8 @@ package com.sen.api.functions;
 
 import java.math.BigDecimal;
 
-public class MaxFunction implements Function{
+public class
+MaxFunction implements Function{
 
 	@Override
 	public String execute(String[] args) {
